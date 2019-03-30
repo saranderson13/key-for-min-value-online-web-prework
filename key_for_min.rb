@@ -7,7 +7,7 @@ def key_for_min_value(name_hash)
   values = name_hash.collect { |key, value| value }
   last_value = values.last
   current_min = values.first
-  min_key.push(keys[0])
+  min_key = [keys[0]]
 
   values.each do |num|
     num > last_value ? current_min = last_value : current_min = num

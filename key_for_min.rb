@@ -16,6 +16,7 @@ def key_for_min_value(name_hash)
     min_key.unshift(keys[values.index(current_min)])
     puts "#{min_key}"
     min_key.pop()
+    puts "#{min_key}"
     
     last_value = num
   end

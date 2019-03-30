@@ -11,9 +11,11 @@ def key_for_min_value(name_hash)
     if num > last_value
       current_min = last_value
     end
-    last_value = num
-    min_key.shift(keys[values.index(num)])
+    
+    min_key.shift(keys[values.index(current_min)])
     min_key.pop()
+    
+    last_value = num
   end
   
   min_key[0]

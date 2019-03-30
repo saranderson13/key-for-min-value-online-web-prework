@@ -5,8 +5,8 @@ def key_for_min_value(name_hash)
 
   keys = name_hash.collect { |key, value| key }
   values = name_hash.collect { |key, value| value }
-  last_value = values.last
-  current_min = values.first
+  last_value = 0
+  current_min = 0
   min_key = [keys[0]]
 
   values.each do |num|

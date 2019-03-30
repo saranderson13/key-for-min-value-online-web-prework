@@ -12,12 +12,12 @@ def key_for_min_value(name_hash)
       puts "Deleted #{keys[values.index(num)]}"
       values.delete_at(values.index(num))
       keys.delete_at(values.index(num))
-    elsif num < last_value
-      adj_delete_index = values.index(num) - 1
-      puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
-      puts "Deleted #{keys[adj_delete_index]}"
-      values.delete_at(adj_delete_index)
-      keys.delete_at(adj_delete_index)
+    # elsif num < last_value
+    #   adj_delete_index = values.index(num) - 1
+    #   puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
+    #   puts "Deleted #{keys[adj_delete_index]}"
+    #   values.delete_at(adj_delete_index)
+    #   keys.delete_at(adj_delete_index)
     end
     last_value = num
   end

@@ -9,11 +9,9 @@ def key_for_min_value(name_hash)
   current_min = values.first
 
   values.each do |num|
-    if num > last_value
-      current_min = last_value
-    end
+    num > last_value ? current_min = last_value : current_min = num
     
-    min_key.shift(keys[values.index(current_min)])
+    min_key.shift(keys[0])
     min_key.pop()
     
     last_value = num

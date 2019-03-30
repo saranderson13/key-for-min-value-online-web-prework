@@ -11,7 +11,6 @@ def key_for_min_value(name_hash)
       if num > last_value
         puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
         puts "Deleted #{keys[values.index(num)]}"
-        values.delete_at(values.index(num))
         keys.delete_at(values.index(num))
       end
     else

@@ -9,10 +9,8 @@ def key_for_min_value(name_hash)
   values.each do |num|
     if keys.length > 2
       if num > last_value
-        last_value = num
         puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
         puts "Deleted #{keys[values.index(num)]}"
-        values.delete(num)
         keys.delete_at(values.index(num))
       end
     else

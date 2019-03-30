@@ -15,9 +15,8 @@ def key_for_min_value(name_hash)
     num > compare ? min_key.unshift(keys[values.index(compare)]) : min_key.unshift(keys[values.index(num)])
     
     puts "#{min_key}"
-    values[keys.index(min_key[0])] < values[keys.index(min_key[1])] ?
+    values[keys.index(min_key[0])] < values[keys.index(min_key[1])] ? min_key.pop() : min_key.shift()
     
-    min_key.pop()
     puts "#{min_key}"
   end
   

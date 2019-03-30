@@ -9,7 +9,7 @@ def key_for_min_value(name_hash)
 
   values.each do |num|
     compare = values[values.index(num) + 1]
-    if compare <= values.length
+    if values.index(num) < values.length
       puts "Comparing #{keys[values.index(num)]} and #{keys[values.index(compare)]}"
       num > compare ? min_key.unshift(keys[values.index(compare)]) : min_key.unshift(keys[values.index(num)])
     end

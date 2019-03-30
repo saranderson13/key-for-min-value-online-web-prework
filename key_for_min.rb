@@ -19,9 +19,6 @@ def key_for_min_value(name_hash)
       if values.first > values.last
         puts "Deleted #{keys[0]}"
         keys.delete_at(0)
-      elsif values.first < values.last
-        puts "Deleted #{keys[1]}"
-        keys.pop()
       end
     end
     last_value = num

@@ -26,7 +26,7 @@ def key_for_min_value(name_hash)
     last_value = num
   end
   
-  puts keys.length
+  puts keys
   
   keys[0]
 end

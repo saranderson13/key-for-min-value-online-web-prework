@@ -18,7 +18,7 @@ def key_for_min_value(name_hash)
     min_key.pop()
     puts "#{min_key}"
     
-    last_value = num
+    last_value = values.index(min_key[0])
   end
   
   min_key[0]

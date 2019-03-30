@@ -8,10 +8,12 @@ def key_for_min_value(name_hash)
 
   values.each do |num|
     if num > last_value
+      puts "Comparing #{keys[values.index(num)} with #{keys[values.index(last_value)}."
       puts "Deleted #{keys[values.index(num)]}"
       keys.delete_at(values.index(num))
     elsif num < last_value
       adj_delete_index = values.index(num) - 1
+      puts "Comparing #{keys[values.index(num)} with #{keys[values.index(last_value)}."
       puts "Deleted #{keys[adj_delete_index]}"
       keys.delete_at(adj_delete_index)
     end

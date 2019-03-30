@@ -11,12 +11,13 @@ def key_for_min_value(name_hash)
     if num > last_value
       puts "Deleted #{keys[values.index(num)]}"
       keys.delete_at(values.index(num))
-    elsif num < last_value
-      puts "Deleted #{keys[values.index(num)]}"
-      keys.pop()
     end
     last_value = num
     puts "Comparing next with: #{last_value}."
+  end
+  
+  if keys.length ==2 
+    
   end
   
   keys[0]

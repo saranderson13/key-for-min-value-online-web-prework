@@ -7,27 +7,27 @@ def key_for_min_value(name_hash)
   last_value = values.last
 
   values.each do |num|
-    if num > last_value
+    if keys.length > 2
+      if num > last_value
+        puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
+        puts "Deleted #{keys[values.index(num)]}"
+        values.delete_at(values.index(num))
+        keys.delete_at(values.index(num))
+      end
+    else
       puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
-      puts "Deleted #{keys[values.index(num)]}"
-      values.delete_at(values.index(num))
-      keys.delete_at(values.index(num))
-    # elsif num < last_value
-    #   adj_delete_index = values.index(num) - 1
-    #   puts "Comparing #{num} #{keys[values.index(num)]} with #{last_value} #{keys[values.index(last_value)]}."
-    #   puts "Deleted #{keys[adj_delete_index]}"
-    #   values.delete_at(adj_delete_index)
-    #   keys.delete_at(adj_delete_index)
+      if num > values.last
+        keys.unshift()
+        puts "Deleted #{keys[values.index(num)]}"
+      elsif num < values.last
+        keys.pop()
+        puts "Deleted #{keys[values.index(num)]}"
+      end
     end
     last_value = num
   end
   
   puts keys.length
-  
-  # if values.last < values.first
-  #   puts "Deleted #{keys[0]}"
-  #   keys.unshift()
-  # end
   
   keys[0]
 end

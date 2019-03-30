@@ -11,6 +11,8 @@ def key_for_min_value(name_hash)
       puts "Deleted #{keys[values.index(num)]}"
       keys.delete_at(values.index(num))
       puts keys
+    elsif num < last_value
+      puts "Nothing deleted."
     end
     last_value = num
   end

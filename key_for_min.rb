@@ -11,6 +11,7 @@ def key_for_min_value(name_hash)
 
   values.each do |num|
     num > last_value ? current_min = last_value : current_min = num
+    puts "Comparing #{keys[values.index(current_min)]} and #{keys[values.index(last_value)]}"
     
     min_key.unshift(keys[values.index(current_min)])
     puts "#{min_key} stop"

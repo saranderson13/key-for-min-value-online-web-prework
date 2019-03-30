@@ -13,7 +13,7 @@ def key_for_min_value(name_hash)
     num > last_value ? current_min = last_value : current_min = num
     
     min_key.unshift(keys[values.index(current_min)])
-    puts min_key
+    puts "#{min_key} stop"
     min_key.pop()
     
     last_value = num

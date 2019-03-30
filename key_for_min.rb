@@ -6,6 +6,7 @@ def key_for_min_value(name_hash)
   keys = name_hash.collect { |key, value| key }
   values = name_hash.collect { |key, value| value }
   last_value = values.last
+  current_min = values.first
 
   values.each do |num|
     if num > last_value

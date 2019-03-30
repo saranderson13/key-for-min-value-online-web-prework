@@ -14,6 +14,8 @@ def key_for_min_value(name_hash)
     last_value = num
   end
   
+  puts keys.length
+  
   if values.last < values.first
     puts "Deleted #{keys[0]}"
     keys.unshift()

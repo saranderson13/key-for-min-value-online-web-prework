@@ -8,17 +8,19 @@ def key_for_min_value(name_hash)
   puts "Comparing first with: #{last_value}"
   
   values.each do |num|
-    if values.index(num) == (values.length - 1)
-      if num < values.first
-        puts "Deleted #{keys[0]}"
-        keys.delete_at[0]
-      end
-    elsif num > last_value
+    if num > last_value
       puts "Deleted #{keys[values.index(num)]}"
       keys.delete_at(values.index(num))
     end
     last_value = num
     puts "Comparing next with: #{last_value}."
+  end
+  
+  puts keys
+  
+  if values.last < values.first
+    puts "Deleted #{keys[0]}"
+    keys.unshift()
   end
   
   keys[0]
